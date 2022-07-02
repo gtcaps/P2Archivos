@@ -1,0 +1,40 @@
+.logoContainer {
+    box-sizing: border-box;
+    background-image: linear-gradient(to top, rgba(44, 63, 148, 0.555), rgb(10, 6, 63));
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+
+    .mainLogo {
+        width: 320px;
+    }
+
+    .btnIngresar {
+        margin-top: -50px;
+        background-color: #646ecb;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #4c549c;
+        }
+    }
+
+    .personalInfo {
+        text-align: center;
+
+        span {
+            display: inline-block;
+            color: #c8c8c886;
+            font-size: 24px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+}

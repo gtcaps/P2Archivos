@@ -1,0 +1,44 @@
+<app-admin-menu></app-admin-menu>
+<div class="usersContainer">
+  <h2>Usuarios Registrados</h2>
+  <table mat-table [dataSource]="dataUsers" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- lastname Column -->
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell *matHeaderCellDef> Apellido </th>
+      <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+    </ng-container>
+
+    <!-- email Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Correo </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.active === true ? 'Activo' : 'Inactivo' }} </td>
+    </ng-container>
+
+    <!-- button change status Column -->
+    <ng-container matColumnDef="changeStatus">
+      <th mat-header-cell *matHeaderCellDef> Cambiar Status </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="accent" (click)="activateUser(element.email, element.active)">
+          {{element.active === true ? 'Desactivar' : 'Activar' }}
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['name','lastname', 'email', 'status', 'changeStatus']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name','lastname', 'email', 'status', 'changeStatus'];"></tr>
+  </table>
+  <mat-spinner style="margin: 0 auto; transform: scale(0.5);" *ngIf="loader"></mat-spinner>
+</div>

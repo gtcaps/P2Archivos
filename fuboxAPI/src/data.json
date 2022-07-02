@@ -1,0 +1,67 @@
+{
+    "name": "/",
+    "files": [
+    ],
+    "folders": [
+        {
+        "name": "home",
+        "files": [
+        ],
+        "folders": [
+            {
+            "name": "user",
+            "files": [
+            ],
+            "folders": [
+                {
+                "name": "docs",
+                "files": [
+                ],
+                "folders": [
+                    {
+                    "name": "usac",
+                    "files": [
+                    ],
+                    "folders": [
+                    ]
+                    }
+                ]
+                },            {
+                "name": "mia",
+                "files": [
+                ],
+                "folders": [
+                    {
+                    "name": "fase1",
+                    "files": [
+                        {
+                            "name": "fase1.txt",
+                            "size": 18175,
+                            "content": ""
+                        }
+                    ],
+                    "folders": [
+                    ]
+                    }
+                ]
+                }
+            ]
+            },        {
+            "name": "gtcaps",
+            "files": [
+            ],
+            "folders": [
+                {
+                "name": "archivos2022",
+                "files": [
+                ],
+                "folders": [
+                ]
+                }
+            ]
+            }
+        ]
+        }
+    ]
+}
+    

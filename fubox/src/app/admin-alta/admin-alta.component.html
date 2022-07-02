@@ -1,0 +1,47 @@
+<app-admin-menu></app-admin-menu>
+<div class="usersContainer">
+  <h2>Dar de Alta Usuarios</h2>
+
+  <div class="formContainer">
+
+    <p *ngIf="errorMessage !== ''" class="errorMessage">{{ errorMessage }}</p>
+    <p *ngIf="successMessage !== ''" class="successMessage">{{ successMessage }}</p>
+
+    <form class="formRegistro" (ngSubmit)="registerUser()">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" [(ngModel)]="name" name="name" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput type="text" name="lastname" [(ngModel)]="lastname" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Correo Electronico</mat-label>
+        <input matInput type="email" placeholder="email@example.com" name="email" [(ngModel)]="email" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input matInput type="tel" maxlength="8" name="telephone" [(ngModel)]="telephone" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" name="password" [(ngModel)]="password" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Fecha Nacimiento</mat-label>
+        <input matInput type="date" name="bornDate" [(ngModel)]="bornDate" required>
+      </mat-form-field>
+
+      <button mat-raised-button name="btn" color="primary" type="submit">Registrar</button>
+
+    </form>
+
+
+  </div>
+</div>

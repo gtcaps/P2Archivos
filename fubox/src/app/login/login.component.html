@@ -1,0 +1,28 @@
+<div class="formContainer">
+
+  <img class="formLogo" src="./assets/img/logo_transparent.png" alt="logo fubox">
+
+  <h2 class="titleForm">Inicio Sesion</h2>
+  <p class="backLink" routerLink="">Regresar</p>
+
+  <p *ngIf="errorMessage !== ''" class="errorMessage">{{ errorMessage }}</p>
+
+  <form class="formRegistro" (ngSubmit)="initSession()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Correo Electronico</mat-label>
+      <input matInput type="email" placeholder="email@example.com" name="email" [(ngModel)]="email" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" name="password" [(ngModel)]="password" required>
+    </mat-form-field>
+
+    <p class="sesionLink" routerLink="/registro">Registro</p>
+
+    <button mat-raised-button name="btn" color="primary" type="submit">Iniciar Sesion</button>
+
+  </form>
+
+
+</div>

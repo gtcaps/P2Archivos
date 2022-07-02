@@ -1,0 +1,57 @@
+<div class="menu">
+  <div class="logo">
+    <img src="./assets/img/logo_transparent.png" alt="">
+    <p>{{ userLoged }}</p>
+  </div>
+  <div class="menuOptions">
+    <a routerLink="/user">Inicio</a>
+    <a >Opcion 2</a>
+    <a routerLink="/userUpdate">Cuenta</a>
+    <a href="/login" (click)="closeSession()">Cerrar Sesion</a>
+  </div>
+</div>
+
+<div class="usersContainer">
+  <h2>Cuenta</h2>
+
+  <div class="formContainer">
+
+    <p *ngIf="errorMessage !== ''" class="errorMessage">{{ errorMessage }}</p>
+    <p *ngIf="successMessage !== ''" class="successMessage">{{ successMessage }}</p>
+
+    <form class="formRegistro" >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" [(ngModel)]="userData.name" name="name" required disabled="{{!habilitarModificar}}">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput type="text" name="lastname" [(ngModel)]="userData.lastname" required disabled="{{!habilitarModificar}}">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Correo Electronico</mat-label>
+        <input matInput type="email" placeholder="email@example.com" name="email" [(ngModel)]="userData.email" disabled>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input matInput type="tel" maxlength="8" name="telephone" [(ngModel)]="userData.telephone" required disabled="{{!habilitarModificar}}">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Fecha Nacimiento</mat-label>
+        <input matInput type="date" name="bornDate" [(ngModel)]="userData.bornDate" required disabled="{{!habilitarModificar}}">
+      </mat-form-field>
+
+      <button mat-raised-button name="btn" color="primary" (click)="habilitarModificar=!habilitarModificar" *ngIf="!habilitarModificar">Modificar</button>
+      <button mat-raised-button name="btn" color="primary" (click)="modificarUsuario()" *ngIf="habilitarModificar">Aceptar Cambios</button>
+      <br>
+      <button mat-raised-button name="btn" color="primary" style="margin-top: 5px;"  (click)="habilitarModificar=!habilitarModificar" *ngIf="habilitarModificar">Cancelar</button>
+
+    </form>
+
+
+  </div>
+</div>

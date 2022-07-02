@@ -1,0 +1,54 @@
+.menu {
+  background-color: rgb(38, 36, 53);
+  height: 75px;
+  padding: 0 70px;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    img {
+      width: 75px;
+    }
+
+    p{
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+    }
+
+  }
+
+  .menuOptions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      padding: 15px 20px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.809);
+        color: #000;
+      }
+
+      &:last-child {
+        color: rgb(246, 105, 95);
+
+        &:hover {
+          background-color: rgb(246, 105, 95);
+          color: #000;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,60 @@
+.formContainer {
+
+  text-align: center;
+
+  .formLogo {
+    width: 150px;
+  }
+
+  .titleForm {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #4c549c;
+  }
+
+  .backLink {
+    color: #4c9c71;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .sesionLink {
+    color: #4c549c;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .errorMessage {
+    box-sizing: border-box;
+    background-color: rgb(249, 52, 52);
+    padding: 10px;
+    width: 500px;
+    display: inline-block;
+    color: white;
+  }
+
+  .successMessage {
+    box-sizing: border-box;
+    background-color: rgb(105, 249, 52);
+    padding: 10px;
+    width: 500px;
+    display: inline-block;
+    color: white;
+  }
+
+}
+
+
+.formRegistro {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
